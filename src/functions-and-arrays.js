@@ -1,24 +1,57 @@
 // Iteration #1: Find the maximum
-function maxOfTwoNumbers() {}
+function maxOfTwoNumbers(a, b) {
+  if (a > b) {
+    return a
+  } else {
+    return b
+  }
+}
 
 
 
 // Iteration #2: Find longest word
 const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
 
-function findLongestWord() {}
-
+function findLongestWord(strs) {
+  if(strs.length == 0) {
+    return null
+  } else {
+    let longest = '';
+    for (let i = 0; i < strs.length; i++) {
+      if (strs[i].length > longest.length)
+      longest = strs[i];
+    }
+    return longest;
+  }
+}
 
 
 // Iteration #3: Calculate the sum
+
+function sumNumbers(arr) {
+  if (arr.length == 0 || arr == 0 ) {
+    return 0
+  } else if(!Array.isArray(arr)) return;
+  let totalNumber = 0;
+  for (let i=0,l=arr.length; i<l; i++) {
+     totalNumber+=arr[i];
+  }
+  return totalNumber;
+}
+
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
-
-function sumNumbers() {}
-
 
 
 // Iteration #3.1 Bonus:
-function sum() {}
+function sum(arr) {
+  if (arr.length == 0 || arr == 0) {
+    return 0
+  } else {
+    for (let i=0; i<arr.length; i++){
+    console.log(`Index: ${i} - element ${arr[i]}`)
+   }
+  } 
+}
 
 
 
@@ -26,16 +59,50 @@ function sum() {}
 // Level 1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
-function averageNumbers() {}
+//Find the sum as we did in the first exercise (or how about reusing that the sumNumbers()?)
+//Take that sum and divide it by the number of elements in the list.
+
+function averageNumbers(arr) {
+  if (arr.length == 0) {
+    return null
+  }
+  let totalNumber = 0;
+  for (let i=0,l=arr.length; i<l; i++) {
+     totalNumber+=arr[i];
+  }
+  let average = totalNumber/arr.length
+  return average;
+}
 
 
 // Level 2: Array of strings
 const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
 
-function averageWordLength() { }
+function averageWordLength(arr) {
+  if (arr.length == 0) {
+    return null
+  } else { 
+    let totalNumber = "";
+    for (let i = 0; i < wordsArr.length; i++) {
+      totalNumber+=arr[i];
+  }
+  let average = totalNumber/arr.length
+  return average;
+}
+}
+
 
 // Bonus - Iteration #4.1
-function avg() {}
+function avg(arr) {
+  if (arr.length == 0) {
+    return null
+  } else { 
+    for (let i = 0; i<= arr.length; i++) {
+      let average = i/arr.length
+      return average
+    }   
+  }
+}
 
 // Iteration #5: Unique arrays
 const wordsUnique = [
@@ -52,7 +119,17 @@ const wordsUnique = [
   'bring'
 ];
 
-function uniquifyArray() {}
+function uniquifyArray(arr) {
+  if (arr.length == 0) {
+    return null
+  } else {
+    let unique = wordsUnique.filter((c, index) => {
+      return chars.indexOf(c) === index;
+  });
+  
+  console.log(uniqueChars);
+  }
+}
 
 
 
