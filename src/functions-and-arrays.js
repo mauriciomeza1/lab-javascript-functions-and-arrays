@@ -104,6 +104,8 @@ function avg(arr) {
   }
 }
 
+//hello!
+
 // Iteration #5: Unique arrays
 const wordsUnique = [
   'crab',
